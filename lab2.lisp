@@ -1,4 +1,4 @@
-;;; Функція 1: Видалення другого і третього елементів списку
+; Функція 1: Видалення другого і третього елементів списку
 (defun skip-every-second-and-third (lst)
   "Видаляє кожен другий і третій елементи з списку, повертаючи новий список."
   (cond
@@ -6,7 +6,7 @@
     (t (cons (car lst)  ; Беремо перший елемент
              (skip-every-second-and-third (cdddr lst))))))  ; Пропускаємо 2 і 3 елементи
 
-;;; Тести для skip-every-second-and-third
+; Тести для skip-every-second-and-third
 (defun test-skip-every-second-and-third ()
   "Проводить тестування функції skip-every-second-and-third."
   (format t "Тест 1: Видалення другого і третього елементів ~%")
@@ -18,7 +18,7 @@
 
 (test-skip-every-second-and-third)
 
-;;; Функція 2: Перетинання двох списків
+; Функція 2: Перетинання двох списків
 (defun item-exists-in-list (item lst)
   "Перевіряє, чи міститься елемент ITEM у списку LST."
   (cond
@@ -35,7 +35,7 @@
            (intersect-lists (cdr lst1) lst2)))  ; Рекурсивно перетинаємо залишки
     (t (intersect-lists (cdr lst1) lst2))))  ; Інакше пропускаємо голову
 
-;;; Тести для intersect-lists
+; Тести для intersect-lists
 (defun test-intersect-lists ()
   "Проводить тестування функції intersect-lists."
   (format t "Тест 1: Перетинання двох списків ~%")
